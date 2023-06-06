@@ -1,0 +1,29 @@
+
+    {% extends 'base.html' %}
+
+    
+    {% block content %}
+        
+    
+            
+        <h1>Profile Page</h1><br><br>
+
+        {% if image.photo %}
+            <img src="{{image.photo.url}}" alt="" height="200">
+        {% else %}
+            <img src="{{default}}" alt="">
+        {% endif %}
+
+        <form action="" method="POST" novalidate enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in pform %}
+                {{field.label_tag}} <br> {{field}} {{field.errors|striptags}} <br><br>
+            {% endfor %}
+            {{iform}}
+            <br><br>
+            <input type="submit" value="Save">
+        </form>
+        <br><br>
+        <a href="{% url 'changepass' %}">Change Password</a>
+        
+    {% endblock content %}

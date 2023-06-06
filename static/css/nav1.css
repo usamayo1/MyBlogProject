@@ -1,0 +1,42 @@
+
+.main-nav{
+    display: inline-flex;
+    border: 2px solid rgb(2, 81, 29);
+    padding-right: 60rem;
+    background: transparent;
+
+}
+.main-heading{
+    color: rgb(86, 5, 49);
+    margin-right: 20px;
+    margin-left: 5px;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.home-link{
+    margin: 25px;
+}
+
+.sign-link{
+    margin-top: 25px;
+
+}
+.login-link{
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.profile-link{
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.out-link{
+    margin-top: 25px;
+    margin-left: 10px;
+}
+a{
+    text-decoration: none;
+    
+}

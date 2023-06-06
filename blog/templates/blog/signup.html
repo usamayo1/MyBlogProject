@@ -1,0 +1,21 @@
+
+    {% extends 'base.html' %}
+
+    {% block pagename %}
+        Sign Up
+    {% endblock pagename %}
+    
+    {% block content %}
+        
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for fm in form %}
+            {{fm.label_tag}} <br> {{fm}} {{fm.errors|striptags}} <br> <br>
+            
+            {% endfor %}
+            <br>
+            <br>
+            <input type="submit" value="SignUp">
+        </form>
+
+    {% endblock content %}

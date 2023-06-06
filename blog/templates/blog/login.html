@@ -1,0 +1,28 @@
+
+    {% extends 'base.html' %}
+
+    {% load static %}
+
+    {% block content %}
+
+        <br>
+        {% if messages %}
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+        {% endif %}
+    <br>
+        <form action="" method="POST" novalidate>
+            {% csrf_token %}
+            {% for fm in form %}
+                {{fm.label_tag}} <br> {{fm}} {{fm.errors|striptags}} <br><br>
+            {% endfor %}
+            
+            <input type="submit" value="Login">
+        </form>
+        <br><br>
+        <small>Not SignUp Yet?</small>
+        <br><br>
+        <a href="{% url 'signup' %}">SignUp</a>
+
+    {% endblock content %}

@@ -1,0 +1,50 @@
+
+    {% extends 'base.html' %}
+
+    {% load static %}
+
+    {% load cache %}
+
+    {% block title %}
+        home page
+    {% endblock title %}
+        
+    
+    {% block link %}
+        {{ block.super }}
+        <link rel="stylesheet" href="{% static 'blog/css/home.css' %}">
+    {% endblock link %}
+        
+    {% block content %}
+    {% cache 60 heading %}
+        <h1>Welcome to last Page <span>'{{request.user.username}}'</span></h1>
+    {% endcache heading %}    
+        <br><br>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Save">
+        </form>
+        <hr><br>
+        {% for post in posts %}
+        <h1>{{post.author.username}}</h1>
+        
+            {% for image in images %}
+                {% if image.user == post.author %}
+                    
+                    <img class="home-img" src="{{image.photo.url}}" alt="" height="100" width="100">                    
+                   
+                {% endif %}
+
+            {% endfor %}
+        {% if request.user == post.author %}
+            <a href="{% url 'editpost' post.id %}">Edit</a>
+            <a href="{% url 'deletepost' post.id%}">Delete</a>
+        {% endif %}
+        <h2>{{post.title}}</h2>
+        <p>{{post.content}}</p>
+        {% endfor %}
+
+        <br>
+
+    {% endblock content %}
