@@ -1,0 +1,7 @@
+I User These Version in virtual environment
+
+asgiref==3.6.0
+Django==4.2.1
+Pillow==9.5.0
+sqlparse==0.4.4
+tzdata==2023.3
