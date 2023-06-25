@@ -1,8 +1,8 @@
 
 .main-nav{
-    display: inline-flex;
+    display: flex;
     border: 2px solid rgb(2, 81, 29);
-    padding-right: 60rem;
+    flex-direction: row;
     background: transparent;
 
 }
@@ -17,23 +17,23 @@
 }
 
 .home-link{
-    margin: 25px;
+    align-self: center;
 }
 
 .sign-link{
-    margin-top: 25px;
+    align-self: center;
 
 }
 .login-link{
-    margin-top: 25px;
+    align-self: center;
     margin-left: 10px;
 }
 .profile-link{
-    margin-top: 25px;
+    align-self: center;
     margin-left: 10px;
 }
 .out-link{
-    margin-top: 25px;
+    align-self: center;
     margin-left: 10px;
 }
 a{

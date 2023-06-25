@@ -1,5 +1,6 @@
 home = document.querySelector('.home-js');
 
+
 home.addEventListener('mouseover', function (){
     home.style.color = 'black';
 });
@@ -35,9 +36,4 @@ out.addEventListener('mouseout', function (){
     out.style.color = '';
 });
 
-
-
-
-
-
-
+/////////////

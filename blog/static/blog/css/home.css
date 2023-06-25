@@ -1,7 +1,33 @@
+.container{
+    display:flex;
+}
+
 h1{
     color: rgb(86, 5, 49);
 }
 span{
     color: darkred;
 
+}
+.item-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.post{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding-left: 50px;
+}
+
+.change-bg{
+    background-color: transparent;
+    border: 2px solid white;
+    color: #fff;
+    border-radius: 40px;
+    padding: 5px;
+    font-size: 15px;
+    align-self: center;
+    justify-self: center;
 }

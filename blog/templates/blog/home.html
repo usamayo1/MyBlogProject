@@ -16,35 +16,58 @@
     {% endblock link %}
         
     {% block content %}
-    {% cache 60 heading %}
-        <h1>Welcome sir <span>'{{request.user.username}}'</span></h1>
-    {% endcache heading %}    
-        <br><br>
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{form.as_p}}
-            <input type="submit" value="Save">
-        </form>
-        <hr><br>
-        {% for post in posts %}
-        <h1>{{post.author.username}}</h1>
-        
-            {% for image in images %}
-                {% if image.user == post.author %}
+    <div class="container">
+        <div class="item-1">
+            {% cache 60 heading %}
+                <h1>Welcome sir <span>'{{request.user.username}}'</span></h1>
+            {% endcache heading %}    
+                <br><br>
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <input type="submit" value="Save">
+                </form>
+
+                <button class="change-bg" >Background</button>
+        </div>
+            <hr><br>
+        <div class="item-2">
+            
+                {% for post in posts %}
+                <div class="post">
+                    <h1>{{post.author.username}}</h1>
                     
-                    <img class="home-img" src="{{image.photo.url}}" alt="" height="100" width="100">                    
-                   
-                {% endif %}
+                        {% for image in images %}
+                            {% if image.user == post.author %}
+                                
+                                <img class="home-img" src="{{image.photo.url}}" alt="" height="100" width="100">                    
+                            
+                            {% endif %}
 
-            {% endfor %}
-        {% if request.user == post.author %}
-            <a href="{% url 'editpost' post.id %}">Edit</a>
-            <a href="{% url 'deletepost' post.id%}">Delete</a>
-        {% endif %}
-        <h2>{{post.title}}</h2>
-        <p>{{post.content}}</p>
-        {% endfor %}
+                        {% endfor %}
+                    {% if request.user == post.author %}
+                        <a href="{% url 'editpost' post.id %}">Edit</a>
+                        <a href="{% url 'deletepost' post.id%}">Delete</a>
+                    {% endif %}
+                    <h2>{{post.title}}</h2>
+                    <p>{{post.content}}</p>
+                </div>
+                {% endfor %}
+            
+        </div>
 
-        <br>
+    </div>
+            <br>
+        <script>
+            color = document.querySelector('.change-bg')
+            color.addEventListener('click', function(){
+                document.body.style.backgroundColor = 'rgb('+ Math.round(Math.random() * 255) +','+ Math.round(Math.random() * 255) +','+ Math.round(Math.random() * 255) +')';
+            })
+        </script>
 
     {% endblock content %}
+
+
+
+    

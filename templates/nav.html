@@ -17,11 +17,15 @@
         <h3 class="out-link"><a class="out-js" href="{% url 'logout' %}">Logout</a></h3>
         {% else %}
         
-            <h3 class="sign-link"><a href="{% url 'signup' %}">Sign Up</a></h3>
-            <h3 class="login-link"><a href="{% url 'login' %}">Login</a></h3>
+        <h3 class="sign-link"><a href="{% url 'signup' %}">Sign Up</a></h3>
+        <h3 class="login-link"><a href="{% url 'login' %}">Login</a></h3>
         {% endif %}
     </nav>
+    
+    {% block javascript %}
+        <script src="{% static 'js/file1.js' %}"></script>  
+    {% endblock javascript %}
+        
 
-    <script src="{% static 'js/file1.js' %}"></script>  
 </body>
 </html>
