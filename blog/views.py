@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.views.generic.base import View
-from .forms import SignupForm, PostForm, UserEditForm, ImageForm
+from .forms import SignupForm, PostForm, UserEditForm, ImageForm, LoginForm
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
@@ -24,9 +24,9 @@ class SignupFormView(View):
 
 def LoginView(request):
     if not request.user.is_authenticated:
-        form = AuthenticationForm()
+        form = LoginForm()
         if request.method == 'POST':
-            form = AuthenticationForm(request=request, data=request.POST)
+            form = LoginForm(request=request, data=request.POST)
             if form.is_valid():
                 username = form.cleaned_data.get('username')
                 password = form.cleaned_data.get('password')

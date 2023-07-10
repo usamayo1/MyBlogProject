@@ -1,21 +1,27 @@
-
-    {% extends 'base.html' %}
+{% extends 'base.html' %}
+{% load static %}
 
     {% block pagename %}
         Sign Up
     {% endblock pagename %}
+
+    {% block link %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'blog/css/signup.css' %}">
+    {% endblock link %}
     
     {% block content %}
         
+    <div class="sign-up-form">
+        <h1>Sign Up Here</h1>
         <form action="" method="POST">
             {% csrf_token %}
             {% for fm in form %}
-            {{fm.label_tag}} <br> {{fm}} {{fm.errors|striptags}} <br> <br>
+            {{fm.label_tag}}  {{fm}} {{fm.errors|striptags}} 
             
             {% endfor %}
-            <br>
-            <br>
-            <input type="submit" value="SignUp">
+           
+            <input class="sub-btn" type="submit" value="SignUp">
         </form>
-
+    </div>
     {% endblock content %}

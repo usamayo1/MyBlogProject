@@ -3,8 +3,38 @@
 }
 
 body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
     /* background-image: url('/media/images/background1.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(153, 190, 115);
+}
+
+.main-nav{
+    display: flex;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.6);
+    justify-content:flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 85px;
+}
+
+.nav-link{
+    color: rgb(48, 83, 212);
+    margin-left: 3%;
+    text-decoration: none;
+    font-weight:500;
+    font-size: 17px;
+    background-color: rgba(249, 244, 244, 0.052);
+    padding: 10px;
+    flex-wrap: nowrap;
+    border-radius: 20px;
+}
+
+.main-nav h1{
+    color: rgb(31, 65, 188);
+    margin-left: 1%;
+    font-size: 30px;
 }

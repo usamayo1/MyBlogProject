@@ -1,0 +1,50 @@
+body{
+    background-image: url('/media/images/background2.jpg');
+    background-size: cover;
+    background-position: inherit;
+}
+
+.sign-up-form{
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    padding: 20px;
+    margin: 8% auto 0;
+    margin-top: 5%;
+    text-align: center;
+    
+}
+
+.sign-up-form h1{
+    color: rgb(48, 83, 212);
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+.input-box{
+    border-radius: 20px;
+    width: 85%;
+    padding: 10px;
+    margin: 15px;
+    outline: none;
+    border: 1px solid rgb(153, 153, 153);
+    background: rgba(255, 252, 252, 0.5);
+}
+
+.sub-btn{
+    color: rgb(48, 83, 212);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: rgba(249, 244, 244, 0.5);
+    cursor: pointer;
+    width: 30%;
+    margin: 10px;
+}
+
+.sub-btn:hover{
+    background-color: rgba(83, 132, 174, 0.5);
+    color: rgb(9, 93, 166);
+}

@@ -3,26 +3,34 @@
 
     {% load static %}
 
+    
+    {% block link %}
+        {{block.super}}
+        <link rel="stylesheet" href="{% static 'blog/css/login.css' %}">
+    {% endblock link %}
+        
+
     {% block content %}
 
-        <br>
+        
         {% if messages %}
             {% for message in messages %}
                 {{message}}
             {% endfor %}
         {% endif %}
-    <br>
+    
+    <div class="login-form">
+        <h1>Login Here</h1>
         <form action="" method="POST" novalidate>
             {% csrf_token %}
             {% for fm in form %}
-                {{fm.label_tag}} <br> {{fm}} {{fm.errors|striptags}} <br><br>
+                {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br>
             {% endfor %}
             
-            <input type="submit" value="Login">
+            <input class="log-btn" type="submit" value="Login">
         </form>
-        <br><br>
-        <small>Not SignUp Yet?</small>
-        <br><br>
-        <a href="{% url 'signup' %}">SignUp</a>
+        <small>Not Sign Up Yet?</small>
+        <a class="sign-btn" href="{% url 'signup' %}">SignUp</a>
+    </div>
 
     {% endblock content %}

@@ -1,0 +1,58 @@
+body{
+    background-image: url('/media/images/background2.jpg');
+    background-size: cover;
+    background-position:inherit;
+    font-family: sans-serif;
+}
+
+.login-form{
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
+    margin: 8% auto 0;
+    margin-top: 5%;
+    width: 270px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.login-form h1{
+    color: rgb(48, 83, 212);
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+.input-box{
+    border: 1px solid rgb(153, 153, 153);
+    width: 85%;
+    padding: 10px;
+    margin: 15px;
+    background: rgba(252, 252, 252, 0.5);
+    border-radius: 20px;
+    outline: none;
+}
+
+.log-btn{
+    font-size: 18px;
+    font-weight: bold;
+    width: 30%;
+    margin: 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 28px;
+    background: rgba(249, 244, 244, 0.5);
+    color: rgb(48, 83, 212);
+    cursor: pointer;
+}
+
+.log-btn:hover{
+    background-color: rgba(83, 132, 174, 0.5);
+    color: rgb(9, 93, 166);
+}
+
+
+.sign-btn{
+    color: rgb(48, 83, 212);
+    text-decoration: none;
+    
+}
