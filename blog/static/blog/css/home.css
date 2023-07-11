@@ -1,5 +1,6 @@
 .container{
     display:flex;
+    margin-top: 50px;
 }
 
 h1{
@@ -15,19 +16,9 @@ span{
 }
 
 .post{
+    color: white;
     border: 2px solid black;
     border-radius: 10px;
     margin: 5px;
     padding-left: 50px;
-}
-
-.change-bg{
-    background-color: transparent;
-    border: 2px solid white;
-    color: #fff;
-    border-radius: 40px;
-    padding: 5px;
-    font-size: 15px;
-    align-self: center;
-    justify-self: center;
 }

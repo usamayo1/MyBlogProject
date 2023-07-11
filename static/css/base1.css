@@ -1,15 +1,77 @@
-.base-tag{
-    color: rgb(82, 178, 56);
-}
 
 body{
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    /* background-image: url('/media/images/background1.jpg'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/media/images/background_hil.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgb(153, 190, 115);
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+
+header{
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
+    height: 5em;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* width: 100%; */
+    transition: background-color 0.4s ease-in-out;
+}
+
+header.scrolled {
+    background-color: rgb(2, 23, 42);
+    opacity: 0.98;
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+header nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    margin-left: 1.5em;
+    transition: color 0.4s ease-in-out;
+}
+ 
+header nav a:hover{
+    opacity: 0.7;
+}
+
+header.scrolled nav a{
+    color: rgb(209, 189, 189);
+} 
+
+header nav h1{
+    color: rgb(48, 83, 212);
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+header{
+    height: 5em;
+    display: flex;
+    align-items: center;
+    position: sticky;
+
 }
 
 .main-nav{
@@ -19,6 +81,8 @@ body{
     align-items: center;
     flex-wrap: wrap;
     height: 85px;
+    width: 100%;
+
 }
 
 .nav-link{
@@ -31,10 +95,15 @@ body{
     padding: 10px;
     flex-wrap: nowrap;
     border-radius: 20px;
+
 }
 
-.main-nav h1{
+.main-nav h1{   
+
     color: rgb(31, 65, 188);
     margin-left: 1%;
     font-size: 30px;
 }
+
+
+*/

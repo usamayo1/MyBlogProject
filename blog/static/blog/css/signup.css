@@ -1,5 +1,5 @@
 body{
-    background-image: url('/media/images/background2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('/media/images/background2.jpg');
     background-size: cover;
     background-position: inherit;
 }
@@ -46,5 +46,5 @@ body{
 
 .sub-btn:hover{
     background-color: rgba(83, 132, 174, 0.5);
-    color: rgb(9, 93, 166);
+    color: rgb(5, 72, 132);
 }
