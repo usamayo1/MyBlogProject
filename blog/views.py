@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.views.generic.base import View
-from .forms import SignupForm, PostForm, UserEditForm, ImageForm, LoginForm
-from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
+from .forms import SignupForm, PostForm, UserEditForm, ImageForm, LoginForm, PasswordChangeForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages

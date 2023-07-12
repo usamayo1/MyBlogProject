@@ -1,19 +1,23 @@
 
     {% extends 'base.html' %}
 
+    {% load static %}
     
     {% block content %}
         
     
-            
-        <h1>Profile Page</h1><br><br>
-
+    {% block link %}
+        {{ block.super }}
+        <link rel="stylesheet" href="{% static 'blog/css/profile.css' %}">
+    {% endblock link %}
+        
+    <div class="profile-form">
         {% if image.photo %}
             <img src="{{image.photo.url}}" alt="" height="200">
         {% else %}
             <img src="{{default}}" alt="">
         {% endif %}
-
+    
         <form action="" method="POST" novalidate enctype="multipart/form-data">
             {% csrf_token %}
             {% for field in pform %}
@@ -21,9 +25,9 @@
             {% endfor %}
             {{iform}}
             <br><br>
-            <input type="submit" value="Save">
+            <input class="save-btn" type="submit" value="Save">
         </form>
-        <br><br>
-        <a href="{% url 'changepass' %}">Change Password</a>
         
+        <a class="change-pass" href="{% url 'changepass' %}">Change Password</a>
+    </div>
     {% endblock content %}

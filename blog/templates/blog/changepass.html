@@ -1,16 +1,21 @@
 
     {% extends 'base.html' %}
+    {% load static %}
 
+    {% block link %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'blog/css/password.css' %}">
+{% endblock link %}
     
     {% block content %} 
-
-        <h1>Change Your Password</h1>
+    <div class="password-form">
+        <h1>Change Password</h1>
         <form action="" method="POST">
             {% csrf_token %}
             {% for fm in form %}
-                {{fm.label_tag}} <br> {{fm}} <br> <br>
+                {{fm.label_tag}}  {{fm}} 
             {% endfor %}
-            <input type="submit" value="Submit">
+            <input class="sub-btn" type="submit" value="Submit">
         </form>
-
+    </div>
     {% endblock content %}

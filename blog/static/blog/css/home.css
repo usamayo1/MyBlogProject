@@ -1,13 +1,17 @@
 .container{
     display:flex;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
-h1{
-    color: rgb(86, 5, 49);
+.container h1{
+    color: rgb(48, 83, 212);
+    margin-left: 10px;
 }
+
 span{
-    color: darkred;
+    color: rgb(226, 217, 217);
+    text-decoration:underline;
 
 }
 .item-1{
@@ -17,8 +21,72 @@ span{
 
 .post{
     color: white;
+    background-color: rgba(2, 23, 42, 0.5);
     border: 2px solid black;
     border-radius: 10px;
-    margin: 5px;
-    padding-left: 50px;
+    margin: 10px;
+    padding: 10px;
+    min-width: 180px;
+    max-width: 280px;
+}
+
+.post img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    display: inline;
+}
+
+.post h1{
+    display: inline;
+    color: rgb(42 43 201);
+    margin-left: 25px;
+    text-decoration: underline;
+}
+
+.post a{
+    font-size: 17px;
+    text-decoration: none;
+    color: rgb(48, 83, 212);
+    padding: 20px;
+}
+
+.post a:hover{
+    opacity: 0.5;
+}
+
+.post:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.6);
+}
+
+.input-box{
+    border: 1px solid rgb(153, 153, 153);
+    width: 85%;
+    padding: 10px;
+    margin: 15px;
+    background: rgba(252, 252, 252, 0.5);
+    border-radius: 20px;
+    outline: none;
+}
+
+.save-btn{
+    font-size: 18px;
+    font-weight: bold;
+    width: 5em;
+    margin: 15px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 28px;
+    background: rgba(249, 244, 244, 0.5);
+    color: rgb(48, 83, 212);
+    cursor: pointer;
+}
+
+.save-btn:hover{
+    background-color: rgba(83, 132, 174, 0.5);
+    color: rgb(62, 143, 213);
 }
